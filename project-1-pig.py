@@ -1,4 +1,5 @@
 import random
+from datetime import datetime
 
 def zar_at():
     return random.randint(1, 6)
@@ -23,6 +24,11 @@ def oyuncu_turu(oyuncu_adi, toplam_puan):
         else:
             print("Geçersiz giriş. Lütfen 'a' ya da 'k' gir.")
 
+def skor_kaydet(kazanan_adi, puan):
+    tarih = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    with open("skor_kaydi.txt", "a", encoding="utf-8") as dosya:
+        dosya.write(f"{tarih} - Kazanan: {kazanan_adi} | Puan: {puan}\n")
+
 def pig_oyunu():
     print("🎲 Pig Zar Oyununa Hoş Geldiniz! İlk 100 puana ulaşan kazanır.")
     oyuncu1 = input("1. oyuncunun adı: ")
@@ -34,12 +40,14 @@ def pig_oyunu():
         puan1 = oyuncu_turu(oyuncu1, puan1)
         if puan1 >= 100:
             print(f"\n🎉 Tebrikler {oyuncu1}, oyunu kazandın!")
+            skor_kaydet(oyuncu1, puan1)
             break
 
         print(f"\n--- {oyuncu2}'nin sırası ---")
         puan2 = oyuncu_turu(oyuncu2, puan2)
         if puan2 >= 100:
             print(f"\n🎉 Tebrikler {oyuncu2}, oyunu kazandın!")
+            skor_kaydet(oyuncu2, puan2)
             break
 
 if __name__ == "__main__":
