@@ -1,4 +1,5 @@
-![Kapak Görseli](https://p4.wallpaperbetter.com/wallpaper/723/230/436/dice-colorful-wallpaper-preview.jpg)
+
+![Kapak Görseli]![colorful](https://github.com/user-attachments/assets/e2b53ab0-bc9e-46e8-ac61-be255dbf05a6)
 
 Zar Oyunu 🎲
 
@@ -26,11 +27,37 @@ Kazanan ve puanı “skor_kaydi.txt” dosyasına kaydedilir.
 
 Nasıl Oynanır?
 
-Oyuncu isimleri girilir.
+🚀 Nasıl Kullanılır?
 
-Her oyuncu sırasıyla ‘a’ tuşuna basarak zar atar veya ‘k’ tuşuna basarak puanını kaydeder.
+Projeyi indir veya klonla
 
-100 puana ilk ulaşan kazanır ve skor kaydı yapılır.
+git clone https://github.com/Ecrin-star-prog/project-1pig.py.git
+
+
+veya sağ üstten Code → Download ZIP.
+
+Klasöre gir
+
+cd project-1pig.py
+
+
+Python dosyasını çalıştır
+
+python project-1-pig.py
+
+
+Oyun açılınca şunları yap
+
+'a' → zar at
+
+'k' → tur puanını kaydet
+
+1 gelirse → tur yanar, sıra değişir
+
+100 puana ilk ulaşan kazanır
+
+Tebrikler dostum
+Artık Pig Game oynayan elit coder tayfadasın 😎🖤
 
 Gereksinimler
 
