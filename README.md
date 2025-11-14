@@ -1,6 +1,6 @@
 ![Kapak Görseli](https://p4.wallpaperbetter.com/wallpaper/723/230/436/dice-colorful-wallpaper-preview.jpg)
 
-Pig Zar Oyunu 🎲
+Zar Oyunu 🎲
 
 Basit ve eğlenceli iki oyunculu zar oyunu!
 
