@@ -1,15 +1,37 @@
-Pig - Turn-Based Dice Game in Python 🎲
+Pig Zar Oyunu 🎲
 
-Simple console game where players take turns rolling a die. Players can roll as many times as they want per turn, but if they roll a 1, they lose all points earned that turn. First player to reach 100 points wins.
+Basit ve eğlenceli iki oyunculu zar oyunu!
 
-How to play:
+Oyun Kuralları
 
-Roll the die (1-6).
+Oyuncular sırayla zar atar.
 
-Keep rolling to accumulate points for your turn.
+Zar 1 geldiğinde o turdaki puanlar sıfırlanır ve sıra diğer oyuncuya geçer.
 
-If you roll a 1, your turn ends and you lose points gained in that turn.
+Zar 1’den farklı gelirse, o turdaki puana eklenir.
 
-You can choose to stop and bank your turn points to your total score.
+Oyuncu istediği zaman tur puanını toplam puanına ekleyip sıra diğer oyuncuya geçer.
 
-First to 100 points wins the game.
+İlk 100 puana ulaşan oyuncu oyunu kazanır.
+
+Özellikler
+
+İki oyunculu konsol tabanlı oyun.
+
+Zar atma ve puanı kaydetme seçenekleri.
+
+Kazanan ve puanı “skor_kaydi.txt” dosyasına kaydedilir.
+
+Nasıl Oynanır?
+
+Oyuncu isimleri girilir.
+
+Her oyuncu sırasıyla ‘a’ tuşuna basarak zar atar veya ‘k’ tuşuna basarak puanını kaydeder.
+
+100 puana ilk ulaşan kazanır ve skor kaydı yapılır.
+
+Gereksinimler
+
+Python 3.x
+
+Standart kütüphane (ekstra paket gerekmez)
