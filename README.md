@@ -1,5 +1,5 @@
 
-![Kapak Görseli]![colorful](https://github.com/user-attachments/assets/e2b53ab0-bc9e-46e8-ac61-be255dbf05a6)
+![colorful](https://github.com/user-attachments/assets/e2b53ab0-bc9e-46e8-ac61-be255dbf05a6)
 
 Zar Oyunu 🎲
 
