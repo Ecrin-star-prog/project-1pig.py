@@ -1,56 +1,46 @@
 import random
 
-def roll():
+def zar_at():
     return random.randint(1, 6)
 
-print("\n_______WELCOME_TO_PIG______\n")
-
-while True:
-    min_players = int(input("Minimum Players : "))
-    max_players = int(input("Maximum Players : "))
-    players = input(f"Enter total number of players({min_players}-{max_players}): ")
-    if players.isdigit():
-        players = int(players)
-        if min_players <= players <= max_players:
-            break
-        elif players < min_players:
-            print(f"Minimum {min_players} players allowed")
-        else:
-            print(f"Only {min_players} - {max_players} allowed")
-    else:
-        print("Invalid Number. Please do not enter alphanumerics or symbols.")
-
-max_score = 100
-player_scores = [0 for _ in range(players)]
-
-current_player = 0
-while True:
-    print(f"\nPlayer No. {current_player + 1} turn has now started")
-    curr_score = 0
-
+def oyuncu_turu(oyuncu_adi, toplam_puan):
+    tur_puani = 0
     while True:
-        player_roll = input("Would you like to roll (y/n)? ")
-        if player_roll.lower() == 'y':
-            value = roll()
-            print(f"You rolled: {value}")
-            if value == 1:
-                print("Rolled 1! No points earned this turn.")
-                curr_score = 0
-                break
+        secim = input(f"{oyuncu_adi}, zar atmak için 'a', puanı kaydetmek için 'k' yaz: ").lower()
+        if secim == 'a':
+            zar = zar_at()
+            print(f"{oyuncu_adi} zar attı: {zar}")
+            if zar == 1:
+                print("1 geldi! Bu turdaki puanlar sıfırlandı.")
+                return toplam_puan
             else:
-                curr_score += value
-                print(f"Current Turn Score: {curr_score}")
-        elif player_roll.lower() == 'n':
-            print(f"Player stops with {curr_score} points this turn.")
-            break
+                tur_puani += zar
+                print(f"Tur puanı: {tur_puani} | Toplam puan: {toplam_puan}")
+        elif secim == 'k':
+            toplam_puan += tur_puani
+            print(f"{oyuncu_adi} puanını kaydetti. Yeni toplam: {toplam_puan}")
+            return toplam_puan
         else:
-            print("Invalid input, please type 'y' or 'n'.")
+            print("Geçersiz giriş. Lütfen 'a' ya da 'k' gir.")
 
-    player_scores[current_player] += curr_score
-    print(f"Player {current_player + 1} Total Score: {player_scores[current_player]}")
+def pig_oyunu():
+    print("🎲 Pig Zar Oyununa Hoş Geldiniz! İlk 100 puana ulaşan kazanır.")
+    oyuncu1 = input("1. oyuncunun adı: ")
+    oyuncu2 = input("2. oyuncunun adı: ")
+    puan1 = puan2 = 0
 
-    if player_scores[current_player] >= max_score:
-        print(f"\nPlayer {current_player + 1} wins with {player_scores[current_player]} points! 🎉")
-        break
+    while puan1 < 100 and puan2 < 100:
+        print(f"\n--- {oyuncu1}'in sırası ---")
+        puan1 = oyuncu_turu(oyuncu1, puan1)
+        if puan1 >= 100:
+            print(f"\n🎉 Tebrikler {oyuncu1}, oyunu kazandın!")
+            break
 
-    current_player = (current_player + 1) % players
+        print(f"\n--- {oyuncu2}'nin sırası ---")
+        puan2 = oyuncu_turu(oyuncu2, puan2)
+        if puan2 >= 100:
+            print(f"\n🎉 Tebrikler {oyuncu2}, oyunu kazandın!")
+            break
+
+if __name__ == "__main__":
+    pig_oyunu()
