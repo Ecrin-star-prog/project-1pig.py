@@ -1,3 +1,5 @@
+![Kapak Görseli](https://p4.wallpaperbetter.com/wallpaper/723/230/436/dice-colorful-wallpaper-preview.jpg)
+
 Pig Zar Oyunu 🎲
 
 Basit ve eğlenceli iki oyunculu zar oyunu!
@@ -35,3 +37,6 @@ Gereksinimler
 Python 3.x
 
 Standart kütüphane (ekstra paket gerekmez)
+
+![Kapak Görseli](https://img.pikbest.com/ai/illus_our/20230529/f2c3a47cd94cf767c342f631355e0ddf.jpg!w700wp)
+
